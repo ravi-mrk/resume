@@ -28,7 +28,7 @@
 \def \@name {}                      % Set \@name to empty by default
 
 % \def \addresssep {\ \textemdash \ }         % Set default address seperator
-\def \addresssep {\ \ \ \ }         % Set default address seperator
+\def \addresssep {\ \ \ \ \ }         % Set default address seperator
 
 % One, two or three address lines can be specified
 \let \@addressone   \relax
@@ -86,8 +86,7 @@
 % Used to create large resume section
 \newenvironment{rSection}[1]{
   \sectionskip
-
-  \textbf{\textsc{#1}}
+  \large\textsc{#1}
   \sectionlineskip
   \hrule
   \begin{list}{}{
@@ -107,21 +106,21 @@
   %%    Employer (bold)                     Dates (regular)    %%
   %%    Title (emphasis)                Location (emphasis)    %%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  {\bf #1}                 \hfill                  {    #2}% Stop a space
+  {\bf #1}                 \hfill                  {    #2}
   \ifthenelse{\equal{#3}{}}{}{
   \\
-  {\em #3}                 \hfill                  {\em #4}% Stop a space
+  {\em #3}                 \hfill                  {\em #4}
   }\smallskip
-  % \cdot used for bullets, items non-indented
-  \begin{list}{$\cdot$}{\leftmargin=0em}
+  % \cdot used for bullets, items indented
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
 }{
   \end{list}
   \vspace{0.5em}
 }
 
-\def\namesize{\huge}
-\def\nameskip{\medskip}
+\def\namesize{\LARGE}
+\def\nameskip{\smallskip}
 \def\sectionlineskip{\medskip}
-\def\sectionskip{\medskip}
-\def\addressskip{\smallskip}
+\def\sectionskip{\smallskip}
+\def\addressskip{\medskip}

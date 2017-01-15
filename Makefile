@@ -3,4 +3,4 @@ all :
 	make clean
 
 clean :
-	rm *.log
+	rm *.log *.out *.aux
