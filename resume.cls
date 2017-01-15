@@ -28,7 +28,8 @@
 \def \@name {}                      % Set \@name to empty by default
 
 % \def \addresssep {\ \textemdash \ }         % Set default address seperator
-\def \addresssep {\ \ \ \ \ }         % Set default address seperator
+% \def \addresssep {\ \ \ \ \ }         % Set default address seperator
+\def \addresssep {\ \textemdash \ }         % Set default address seperator
 
 % One, two or three address lines can be specified
 \let \@addressone   \relax
