@@ -124,4 +124,4 @@
 \def\nameskip{\smallskip}
 \def\sectionlineskip{\medskip}
 \def\sectionskip{\smallskip}
-\def\addressskip{\medskip}
+\def\addressskip{\smallskip}

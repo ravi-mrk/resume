@@ -24,9 +24,9 @@
 
 \name{Irfan Sharif} % Your name
 \address {
-          % \Mundus \ 
+          % \Mundus \
           \href{http://irfansharif.io/}{irfansharif.io} \\
-          % \Letter \ 
+          % \Letter \
           \href{mailto:irfan@irfansharif.io}{irfan@irfansharif.io}\ \\
           % $\vcenter{\hbox{\includegraphics[height=10pt]{linkedin.png}}}$
           \href{https://www.linkedin.com/in/irfansharifm}{in/irfansharifm} \\
@@ -44,7 +44,9 @@
   \vspace {0.5em}
   \begin{list}{$\cdot$}{\leftmargin=0em}
     \itemsep -0.5em \vspace{-0.5em}
-    \item Loren Ipsum
+    \item Experience with distributed systems, storage engines and systems architecture
+    \item Go, Haskell, Ruby, C/C\texttt{++}, Python with working knowledge of
+      Git, Redis, Docker and NGINX
   \end{list}
   \vspace{0.5em}
 \end{rSection}
@@ -54,14 +56,20 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
-  \begin{rSubsection}{Cockroach Labs}
+  \begin{rSubsection}{Cockroach Labs, Inc.}
                      {Aug -- Dec, 2016}
                      {Backend Engineering Intern}
                      {New York, NY}
-    \item Implemented distributed \texttt{SORT}, \texttt{AGGREGATION},
-      \texttt{DISTINCT} and \texttt{JOIN}s
-    \item Optimized existing \texttt{JOIN} implementation to use hash joins for
-      an $\mathcal{O}(n)$ factor speedup
+
+    \item Constructed the distributed, parallel query processing engine for
+      CockroachDB (see
+      \href{https://github.com/cockroachdb/cockroach/pulls?q=is\%3Apr\%20author\%3Airfansharif}{Github})
+    \item Implemented distributed sort algorithms, parallel aggregations for
+      data analytics workloads
+    \item Added distributed row de-duplication and highly performant $n$-way
+      parallel SQL joins
+    \item Re-wrote the SQL join implementation to use in-memory hash
+      tables for a speedup of a factor
   \end{rSubsection}
 
   \begin{rSubsection}{Shopify}
@@ -69,11 +77,11 @@
                      {Production Engineering Intern}
                      {Ottawa, ON}
 
-  \item Designed a CI system with auto-scaling build agents running on AWS Spot
-    Instances 
-  \item Engineered termination-resilient build workers with dynamic workload
-    re-distribution
-  \item Optimized orchestration system to handle \underline{1,000} builds per
+  \item Designed a dynamic, flexible continuous integration system with
+    auto-scaling build agents
+  \item Built infrastructure to support dynamic workload distribution across
+    distributed agents
+  \item Optimized orchestration system to handle \underline{1,000}\texttt{+} builds per
     day saving \underline{60,000} USD per month
   \end{rSubsection}
 
@@ -81,7 +89,8 @@
                      {May -- Sept, 2015}
                      {Software Engineering Intern}
                      {Kanata, ON}
-    \item Decomposed monolith platform into independent, resilient
+
+    \item Decomposed single monolith platform into inter-connected, resilient
       microservices
   \end{rSubsection}
 \end{rSection}
@@ -91,14 +100,14 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Research}
-  \begin{rSubsection}{UWaterloo Computer Aided Reasoning Lab}
-                     {Sept -- Dec, 2016}
+  \begin{rSubsection}{uWaterloo Computer Aided Reasoning Lab}
+                     {Sept -- Dec, 2015}
                      {Researcher}
                      {Waterloo, ON}
     \item Researched under Prof. Vijay Ganesh on Boolean SAT solvers, optimizing
       search strategies
-    \item Independently discovered parallelization algorithm by means of
-      clustering related SAT clauses
+    \item Independently discovered parallelization algorithm by clustering
+      related SAT clauses
   \end{rSubsection}
 \end{rSection}
 
@@ -107,40 +116,40 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
-  \begin{rSubsection}{cfilter}{\em \href{http://website.com}{website.com}}{}
+  \begin{rSubsection}{CFilter}{\em{\href{https://git.io/v6GkV}{git.io/v6GkV}}}{}
 
-    \item Loren Ipsum
+    \item Cuckoo Filter paper implementation, a probabilistic data structure for
+      set-membership queries
+    \item Trended on the front page of HackerNews with \underline{14,000}\texttt{+} page
+      views and \underline{500}\texttt{+} stars on Github
   \end{rSubsection}
 
-  \begin{rSubsection}{gossip}{\em \href{http://website.com}{website.com}}{}
+  \begin{rSubsection}{Gossip}{\em{\href{https://git.io/vMrE9}{git.io/vMrE9}}}{}
 
-    \item Loren Ipsum
+    \item Embeddable distributed gossip networks based on the SWIM paper, using
+      gRPC and protobufs
+    \item Eventual consistency model, resilient to partial failures through dissemination protocols
   \end{rSubsection}
 
-  \begin{rSubsection}{mqueue}{\em \href{http://website.com}{website.com}}{}
+  % \begin{rSubsection}{cerebrum}{\texttt{\href{https://git.io/vwRxF}{git.io/vwRxF}}}{}
 
-    \item Loren Ipsum
-  \end{rSubsection}
-  
-  \begin{rSubsection}{cerebrum}{\em \href{http://website.com}{website.com}}{}
+  %   \item Implemented artificial neural networks; \underline{2,000} installs
+  %     with \underline{93}\% correctness on MNIST datasets
+  % \end{rSubsection}
 
-    \item Loren Ipsum
-  \end{rSubsection}
+  % \begin{rSubsection}{chaos-monkeys}{\texttt{\href{http://website.com}{website.com}}}{}
 
-  \begin{rSubsection}{chaos-monkeys}{\em \href{http://website.com}{website.com}}{}
+  %   \item DSL for defining infrastructure as a connected graph \& inducing
+  %     multi-level failure scenarios to test/tune resiliency algorithms
+  %   \item Chaos-monkeys run `monkey scripts' that introduce network lag, fill
+  %     disk space, shut down nodes, fail databases \& throttle load-balancers
+  % \end{rSubsection}
 
-    \item Loren Ipsum
-  \end{rSubsection}
+  % \begin{rSubsection}{mqueue}{\texttt{\href{https://git.io/vr3ZK}{git.io/vr3ZK}}}{}
 
-  \begin{rSubsection}{rlisp}{\em \href{http://website.com}{website.com}}{}
-
-    \item Loren Ipsum
-  \end{rSubsection}
-
-  \begin{rSubsection}{dit}{\em \href{http://website.com}{website.com}}{}
-
-    \item Loren Ipsum
-  \end{rSubsection}
+  %   \item POSIX message queue wrapper, up to \underline{425,000}
+  %     RPS across multiple producers/consumers
+  % \end{rSubsection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -149,7 +158,13 @@
 
 \begin{rSection}{Education}
   {\bf University of Waterloo} \hfill {2014 -- 2019 \em (expected)} \\
-  {\em Honours Bachelor of Applied Science in Computer Engineering} \hfill {\em GPA 3.7}
+  {\em Honours Bachelor of Applied Science in Computer Engineering} \hfill {GPA 3.7}
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+    \item Class Representative, President's Scholarship, Distributed Systems Reading Group
+    \item Selected Coursework: Compilers, Operating Systems, Algorithms
+  \end{list}
+  \vspace{0.5em}
 \end{rSection}
 
 \end{document}
