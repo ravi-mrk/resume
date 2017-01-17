@@ -27,8 +27,6 @@
 \def \name#1{\def\@name{#1}}        % \name command can be used to set name
 \def \@name {}                      % Set \@name to empty by default
 
-% \def \addresssep {\ \textemdash \ }         % Set default address seperator
-% \def \addresssep {\ \ \ \ \ }         % Set default address seperator
 \def \addresssep {\ \textemdash \ }         % Set default address seperator
 
 % One, two or three address lines can be specified
@@ -91,7 +89,7 @@
   \sectionlineskip
   \hrule
   \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
+    \setlength{\leftmargin}{0em}
   }
   \item[]
 }{
