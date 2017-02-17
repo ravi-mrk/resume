@@ -1,15 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -22,7 +10,7 @@
 \usepackage{marvosym}
 \usepackage{graphicx}
 
-\name{Irfan Sharif} % Your name
+\name{Irfan Sharif}
 \address {% \Mundus \
           \href{http://irfansharif.io/}{irfansharif.io} \\
           % \Letter \
@@ -36,14 +24,15 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
+%	SUMMARY SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Skills}
+\begin{rSection}{Summary}
   \vspace {0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
     \itemsep -0.5em \vspace{-0.5em}
-    \item Industry experience with distributed systems, storage engines, and microservices
+    \item Industry experience with distributed systems, storage engines, and
+      microservices
     \item Go, Haskell, Ruby, C/C\texttt{++}, Python with working knowledge of
       Git, Redis, Docker, and NGINX
   \end{list}
@@ -66,8 +55,8 @@
       analytics workloads
     \item Designed distributed row de-duplication and highly performant $n$-way
       parallel SQL joins
-    \item Improved existing SQL join performance by an order of magnitude
-      using in-memory hash tables
+    \item Improved existing SQL join performance by an order of magnitude using
+      in-memory hash tables
   \end{rSubsection}
 
   \begin{rSubsection}{Shopify}
@@ -88,8 +77,8 @@
                      {Software Engineering Intern}
                      {Kanata, ON}
 
-    \item Decomposed a single monolith platform into inter-connected and resilient
-      microservices
+    \item Decomposed a single monolith platform into inter-connected and
+      resilient microservices
   \end{rSubsection}
 \end{rSection}
 
@@ -102,8 +91,8 @@
                      {Sept -- Dec '15}
                      {Researcher}
                      {Waterloo, ON}
-    \item Researched under Prof. Vijay Ganesh on Boolean SAT solvers and optimizing
-      search strategies
+    \item Researched under Prof. Vijay Ganesh on Boolean SAT solvers and
+      optimizing search strategies
     \item Independently discovered a parallelization algorithm by clustering
       related SAT clauses
   \end{rSubsection}
@@ -114,15 +103,17 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
-  \begin{rSubsection}{CFilter}{\em{\href{https://git.io/v6GkV}{git.io/v6GkV}}}{}
+  \begin{rSubsection}{CFilter}
+                     {\em{\href{https://git.io/v6GkV}{git.io/v6GkV}}}{}
 
     \item Implemented the Cuckoo Filter paper, a probabilistic data structure for
       set-membership queries
-    \item Trended on the front page of HackerNews with 14,000\texttt{+} page
-      views and 500\texttt{+} stars on Github
+    \item Trended on the front page of HackerNews with 14,000\texttt{+} views,
+      615\texttt{+} stars and 15\texttt{+} forks on GitHub
   \end{rSubsection}
 
-  \begin{rSubsection}{Gossip}{\em{\href{https://git.io/vMrE9}{git.io/vMrE9}}}{}
+  \begin{rSubsection}{Gossip}
+                     {\em{\href{https://git.io/vMrE9}{git.io/vMrE9}}}{}
 
     \item Implemented embeddable distributed gossip networks based on the SWIM
       paper
@@ -130,38 +121,12 @@
       resilient to partial failures
   \end{rSubsection}
 
-  \begin{list}{}{\leftmargin=0.0em}
-  \itemsep -0.5em \vspace{-0.0em}
-  % \item {\em Open-source contributions:}
-  %   \href{https://github.com/robfig/glock}{\textbf{robfig/glock}},
-  %   \href{https://github.com/spf13/cobra}{\textbf{spf13/cobra}},
-  %   \href{https://github.com/graphql-go/graphql}{\textbf{graphql-go/graphql}}
-  \item {\em Open-source contributions:}
-    \href{https://github.com/robfig/glock}{\textbf{robfig/Glock}},
-    \href{https://github.com/spf13/cobra}{\textbf{spf13/Cobra}},
-    \href{https://github.com/graphql-go/graphql}{\textbf{graphql-go/GraphQL}}
-  \end{list}
-  \vspace{0.5em}
-
-  % \begin{rSubsection}{cerebrum}{\texttt{\href{https://git.io/vwRxF}{git.io/vwRxF}}}{}
-
-  %   \item Implemented artificial neural networks; \underline{2,000} installs
-  %     with \underline{93}\% correctness on MNIST datasets
-  % \end{rSubsection}
-
-  % \begin{rSubsection}{chaos-monkeys}{\texttt{\href{http://website.com}{website.com}}}{}
-
-  %   \item DSL for defining infrastructure as a connected graph \& inducing
-  %     multi-level failure scenarios to test/tune resiliency algorithms
-  %   \item Chaos-monkeys run `monkey scripts' that introduce network lag, fill
-  %     disk space, shut down nodes, fail databases \& throttle load-balancers
-  % \end{rSubsection}
-
-  % \begin{rSubsection}{mqueue}{\texttt{\href{https://git.io/vr3ZK}{git.io/vr3ZK}}}{}
-
-  %   \item POSIX message queue wrapper, up to \underline{425,000}
-  %     RPS across multiple producers/consumers
-  % \end{rSubsection}
+  \begin{rMinisection}
+    \item {\em Open-source contributions:}
+      \href{https://github.com/robfig/glock}{\textbf{robfig/Glock}},
+      \href{https://github.com/spf13/cobra}{\textbf{spf13/Cobra}},
+      \href{https://github.com/graphql-go/graphql}{\textbf{graphql-go/GraphQL}}
+  \end{rMinisection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------

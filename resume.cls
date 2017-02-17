@@ -96,6 +96,14 @@
   \end{list}
 }
 
+\newenvironment{rMinisection}[0]{
+  \begin{list}{}{\leftmargin=0.0em}
+  \itemsep -0.5em \vspace{-0.0em}
+}{
+  \end{list}
+  \vspace{0.5em}
+}
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
@@ -110,7 +118,6 @@
   \\
   {\em #3}                 \hfill                  {\em #4}
   }\smallskip
-  % \cdot used for bullets, items indented
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
 }{
@@ -118,7 +125,7 @@
   \vspace{0.5em}
 }
 
-\def\namesize{\LARGE}
+\def\namesize{\huge}
 \def\nameskip{\smallskip}
 \def\sectionlineskip{\medskip}
 \def\sectionskip{\smallskip}
