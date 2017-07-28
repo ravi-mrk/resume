@@ -13,7 +13,7 @@
 \LoadClass[10pt,letterpaper]{article} % Font size and paper type
 
 \usepackage[T1]{fontenc}
-\usepackage[parfill]{parskip}         % Do not indent pragraphs
+\usepackage[parfill]{parskip}         % Do not indent paragraphs
 \usepackage{array}                    % required for boldface tabular columns
 \usepackage{ifthen}
 
@@ -122,7 +122,7 @@
   \itemsep -0.5em \vspace{-0.5em}
 }{
   \end{list}
-  \vspace{0.5em}
+  \vspace{0.1em}
 }
 
 \def\namesize{\huge}

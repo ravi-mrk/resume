@@ -4,7 +4,7 @@
 % !TeX spellcheck = en
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.75in,top=0.52in,right=0.75in,bottom=0.52in]{geometry} % Document margins
 
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=black]{hyperref}
 \usepackage{marvosym}
@@ -28,9 +28,10 @@
   \vspace {0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
     \itemsep -0.5em \vspace{-0.5em}
-    \item Experienced with database/storage engines, distributed systems \&
-      performance/system profiling
-    \item Go, Haskell, C/C\texttt{++}, Ruby, Python; working knowledge of Rust
+    \item Experienced with Go, Haskell, C, C\texttt{++}, Ruby, Python with working
+      knowledge of Rust
+    \item Exposure to performance profiling with pprof, perf,
+      kcachegrind/callgrind and flame graphs
   \end{list}
   \vspace{0.5em}
 \end{rSection}
@@ -44,29 +45,32 @@
 
   {\bf Cockroach Labs, Inc.}  \hfill  {\em New York, NY}
   \\
-  {\em Storage/Core}  \hfill  {May -- Sept '17}
+  {\em Storage/Performance}  \hfill  {May -- Sept '17}
   \smallskip
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
-    \item Designed a flow-control/throttling mechanism for write operations
-      reducing long tail latencies
-    \item Authored \& implemented an RFC introducing a dedicated storage engine
-      for Raft's access patterns/persistent state; increased overall system
-      write throughput
-    \item Patched Raft Pre-Vote mechanism (from the thesis paper) in the
-      \href{https://github.com/coreos/etcd}{\textbf{etcd/raft}}
+    \item Designed a flow-control mechanism for write operations to reduce 99-th
+      percentile latencies
+    \item Authored and implemented an RFC introducing a dedicated storage engine
+      specialized for Raft's access patterns/persistent state, experimentally
+      increased system write throughput by 13.63\%
+    \item Patched the Pre-Vote mechanism (from the Raft thesis paper) in the
+      \href{https://github.com/coreos/etcd/pull/8288}{\textbf{etcd/raft}}
       implementation
+    \item Re-wrote core parts of
+      \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}} batching
+      system writes and lowered memory footprint
 
   \end{list}
   {\em Distributed SQL}  \hfill  {Aug -- Dec '16}
   \smallskip
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
-    \item Constructed the distributed \& parallel query processing engine in
-        CockroachDB {\em (\href{https://git.io/vMKFV}{git.io/vMKFV})}
-    \item Implemented distributed sort algorithms \& parallel aggregations for
+    \item Constructed the distributed and parallel query processing engine
+      based off the DistSQL RFC
+    \item Implemented distributed sort algorithms and parallel aggregations for
       analytics workloads
-    \item Designed distributed row de-duplication \& highly performant $n$-way
+    \item Designed distributed row de-duplication and highly performant $n$-way
       parallel SQL joins
     \item Improved existing SQL join performance by an order of magnitude using
       in-memory hash tables
@@ -78,7 +82,7 @@
                      {Production Engineering}
                      {Jan -- Apr '16}
 
-  \item Designed a dynamic \& flexible continuous integration system with
+  \item Designed a dynamic and flexible continuous integration system with
     auto-scaling build agents
   \item Built infrastructure to support dynamic workload distribution across
     shared worker pools
@@ -91,7 +95,7 @@
                      {Cloud Migration}
                      {May -- Sept '15}
 
-   \item Decomposed a single monolith platform into inter-connected \&
+   \item Decomposed a single monolith platform into inter-connected and
       resilient microservices
   \end{rSubsection}
 \end{rSection}
@@ -101,13 +105,13 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Research}
-  {\bf uWaterloo Computer Aided Reasoning Lab}  \hfill  {Oct -- Dec '15}
-    \smallskip
-    \begin{list}{$\cdot$}{\leftmargin=1.0em}
-    \itemsep -0.5em \vspace{-0.5em}
-    \item Researched SAT solvers optimizing search; studied
-      clustering \& parallelization strategies
-    \end{list}
+  \begin{rSubsection}{uWaterloo Computer Aided Reasoning Lab}
+                     {Waterloo, ON}
+                     {Researcher}
+                     {Oct -- Dec '16}
+   \item Researched SAT solvers optimizing search, studied
+     clustering and parallelization strategies
+  \end{rSubsection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -115,27 +119,29 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
-  \begin{rSubsection}{Haskal}
+  \begin{rSubsection}{Compiler}
                      {\href{https://git.io/v7cGZ}{git.io/v7cGZ}}
                      {}{}
-     \item Completed our compilers course (ECE 351) entirely in Haskell, was
-       the first student to do so
-     \item Implemented register allocation, code generation, common
-       sub-expression elimination, etc.
+   \item Wrote a compiler in Haskell for a subset of VHDL, authored a
+     transpiler to Java for simulation
+   \item Added code generation, register allocation, dead code and common
+     sub-expression elimination
   \end{rSubsection}
 
   \begin{rSubsection}{CFilter}
     {\href{https://git.io/v6GkV}{git.io/v6GkV}}
                      {}{}
-     \item Research paper implementation; HN front page with 30,000\texttt{+}
-       views, 670\texttt{+} stars \& 30\texttt{+} forks
+     \item Implemented the Cuckoo Filter paper, a probabilistic data structure for
+       set-membership queries
+     \item Trended on the front page of HackerNews with 30,000\texttt{+} views,
+       670\texttt{+} stars and 30\texttt{+} forks on GitHub
   \end{rSubsection}
 
   \begin{rMinisection}
     \item {\em Open-source contributions:}
       \href{https://github.com/uber/go-torch}{\textbf{uber/go-torch}},
       \href{https://github.com/coreos/etcd}{\textbf{coreos/etcd}},
-      \href{https://github.com/graphql-go/graphql}{\textbf{graphql-go/graphql}}
+      \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}}
   \end{rMinisection}
 \end{rSection}
 
