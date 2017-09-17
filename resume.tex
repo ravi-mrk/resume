@@ -51,15 +51,15 @@
   \itemsep -0.5em \vspace{-0.5em}
     \item Designed a flow-control mechanism for write operations to reduce 99-th
       percentile latencies
-    \item Authored and implemented an RFC introducing a dedicated storage engine
-      specialized for Raft's access patterns/persistent state, experimentally
-      increased system write throughput by 13.63\%
-    \item Patched the Pre-Vote mechanism (from the Raft thesis paper) in the
-      \href{https://github.com/coreos/etcd/pull/8288}{\textbf{etcd/raft}}
-      implementation
-    \item Re-wrote core parts of
-      \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}} batching
-      system writes and lowered memory footprint
+    \item Authored and implemented an RFC introducing a dedicated storage
+      engine specialized for Raft's access patterns/persistent state, increased
+      system write throughput by 14.6\%
+    \item Fixed
+      \href{https://github.com/coreos/etcd/pull/8288}{\textbf{etcd/raft}}'s
+      PreVote implementation from the Raft thesis paper, model checked with TLA\texttt{+}
+    \item Re-wrote core
+      \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}}, an RPC
+      subsystem, batching syscalls and reducing GC pressure
 
   \end{list}
   {\em Distributed SQL}  \hfill  {Aug -- Dec '16}
@@ -109,8 +109,8 @@
                      {Waterloo, ON}
                      {Researcher}
                      {Oct -- Dec '16}
-   \item Researched SAT solvers optimizing search, studied
-     clustering and parallelization strategies
+   \item Researched SAT solvers and search space pruning, studied clustering and
+     parallelization strategies
   \end{rSubsection}
 \end{rSection}
 
@@ -124,8 +124,8 @@
                      {}{}
    \item Wrote a compiler in Haskell for a subset of VHDL, authored a
      transpiler to Java for simulation
-   \item Added code generation, register allocation, dead code and common
-     sub-expression elimination
+   \item Added code generation, register allocation, common sub-expression and
+     dead code elimination
   \end{rSubsection}
 
   \begin{rSubsection}{CFilter}
@@ -139,9 +139,9 @@
 
   \begin{rMinisection}
     \item {\em Open-source contributions:}
-      \href{https://github.com/uber/go-torch}{\textbf{uber/go-torch}},
       \href{https://github.com/coreos/etcd}{\textbf{coreos/etcd}},
       \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}}
+      \href{https://github.com/uber/go-torch}{\textbf{uber/go-torch}},
   \end{rMinisection}
 \end{rSection}
 
