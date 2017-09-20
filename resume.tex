@@ -30,7 +30,7 @@
     \itemsep -0.5em \vspace{-0.5em}
     \item Experienced with Go, Haskell, C, C\texttt{++}, Ruby, Python with working
       knowledge of Rust
-    \item Exposure to performance profiling with pprof, perf,
+    \item Exposure to performance profiling using pprof, perf,
       kcachegrind/callgrind and flame graphs
   \end{list}
   \vspace{0.5em}
@@ -49,17 +49,18 @@
   \smallskip
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
-    \item Designed a flow-control mechanism for write operations to reduce 99-th
-      percentile latencies
-    \item Authored and implemented an RFC introducing a dedicated storage
+    \item Designed a flow-control mechanism for all write operations to reduce
+      99-th percentile latencies
+    \item Authored and implemented an
+      \href{https://github.com/cockroachdb/cockroach/pull/16361}{\underline {RFC}} introducing
+      a dedicated storage
       engine specialized for Raft's access patterns/persistent state, increased
-      system write throughput by 14.6\%
-    \item Fixed
+      total system write throughput by 14.6\%
+    \item Patched
       \href{https://github.com/coreos/etcd/pull/8288}{\textbf{etcd/raft}}'s
-      PreVote implementation from the Raft thesis paper, model checked with TLA\texttt{+}
-    \item Re-wrote core
-      \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}}, an RPC
-      subsystem, batching syscalls and reducing GC pressure
+      PreVote extension from the Raft thesis paper, formally proved using TLA\texttt{+}
+    \item Forked \href{https://github.com/irfansharif/grpc-go}{\textbf{grpc/grpc-go}},
+      increased throughput by 12.8\% batching syscalls/reducing GC pressure
 
   \end{list}
   {\em Distributed SQL}  \hfill  {Aug -- Dec '16}
@@ -139,9 +140,9 @@
 
   \begin{rMinisection}
     \item {\em Open-source contributions:}
-      \href{https://github.com/coreos/etcd}{\textbf{coreos/etcd}},
-      \href{https://github.com/grpc/grpc-go}{\textbf{grpc/grpc-go}}
-      \href{https://github.com/uber/go-torch}{\textbf{uber/go-torch}},
+      \href{https://github.com/coreos/etcd/pull/8288}{\textbf{coreos/etcd}},
+      \href{https://github.com/grpc/grpc-go/pull/1478}{\textbf{grpc/grpc-go}},
+      \href{https://github.com/uber/go-torch/pull/62}{\textbf{uber/go-torch}}
   \end{rMinisection}
 \end{rSection}
 
