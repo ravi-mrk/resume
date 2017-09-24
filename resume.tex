@@ -54,11 +54,13 @@
     \item Authored and implemented an
       \href{https://github.com/cockroachdb/cockroach/pull/16361}{\underline {RFC}} introducing
       a dedicated storage
-      engine specialized for Raft's access patterns/persistent state, increased
+      engine specialized for Raft's access patterns and persistent state, increased
       total system write throughput by 14.6\%
     \item Patched
       \href{https://github.com/coreos/etcd/pull/8288}{\textbf{etcd/raft}}'s
-      PreVote extension from the Raft thesis paper, formally proved using TLA\texttt{+}
+      PreVote extension from the Raft thesis paper, formally
+      \href{https://github.com/irfansharif/raft.tla/commit/22b05818b6bcfe6719a708f2270a1308fecbc0fa}{\underline {proved}}
+      using TLA\texttt{+}
     \item Forked \href{https://github.com/irfansharif/grpc-go}{\textbf{grpc/grpc-go}},
       increased throughput by 12.8\% batching syscalls/reducing GC pressure
 
@@ -67,14 +69,18 @@
   \smallskip
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
-    \item Constructed the distributed and parallel query processing engine
-      based off the DistSQL RFC
+    \item Constructed a distributed/parallel query execution engine based off
+      the DistSQL
+      \href{https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160421_distributed_sql.md}{\underline
+      {RFC}}
     \item Implemented distributed sort algorithms and parallel aggregations for
       analytics workloads
     \item Designed distributed row de-duplication and highly performant $n$-way
       parallel SQL joins
-    \item Improved existing SQL join performance by an order of magnitude using
-      in-memory hash tables
+    \item Improved JOIN performance by an order of magnitude, the
+      subject of an engineering blog
+      \href{https://www.cockroachlabs.com/blog/better-sql-joins-in-cockroachdb/}{\underline
+      {post}}
   \end{list}
   \vspace{0.5em}
 
@@ -120,7 +126,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
-  \begin{rSubsection}{Compiler}
+  \begin{rSubsection}{VCompiler}
                      {\href{https://git.io/v7cGZ}{git.io/v7cGZ}}
                      {}{}
    \item Wrote a compiler in Haskell for a subset of VHDL, authored a
@@ -134,8 +140,10 @@
                      {}{}
      \item Implemented the Cuckoo Filter paper, a probabilistic data structure for
        set-membership queries
-     \item Trended on the front page of HackerNews with 30,000\texttt{+} views,
-       670\texttt{+} stars and 30\texttt{+} forks on GitHub
+     \item Trended on the front page of
+       \href{https://news.ycombinator.com/item?id=12241332}{\underline
+       {HackerNews}} with 30,000\texttt{+} views, 670\texttt{+} stars and
+       30\texttt{+} forks on GitHub
   \end{rSubsection}
 
   \begin{rMinisection}
