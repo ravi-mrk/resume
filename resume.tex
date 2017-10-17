@@ -28,10 +28,10 @@
   \vspace {0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
     \itemsep -0.5em \vspace{-0.5em}
-    \item Experienced with Go, Haskell, C, C\texttt{++}, Ruby, Python with working
-      knowledge of Rust
-    \item Exposure to performance profiling using pprof, perf,
-      kcachegrind/callgrind and flame graphs
+    \item Experienced with Go, Haskell, C, C\texttt{++}, Ruby, Python with
+      working knowledge of Rust
+    \item Interested in infrastructure, distributed systems, storage engines
+      and performance engineering
   \end{list}
   \vspace{0.5em}
 \end{rSection}
@@ -41,14 +41,11 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
+  \begin{rSubsection}{Cockroach Labs, Inc.}
+                     {New York, NY}
+                     {Storage/Performance}
+                     {May -- Sept '17}
 
-
-  {\bf Cockroach Labs, Inc.}  \hfill  {\em New York, NY}
-  \\
-  {\em Storage/Performance}  \hfill  {May -- Sept '17}
-  \smallskip
-  \begin{list}{$\cdot$}{\leftmargin=1.0em}
-  \itemsep -0.5em \vspace{-0.5em}
     \item Designed a flow-control mechanism for all write operations to reduce
       99-th percentile latencies
     \item Authored and implemented an
@@ -63,12 +60,13 @@
       using TLA\texttt{+}
     \item Forked \href{https://github.com/irfansharif/grpc-go}{\textbf{grpc/grpc-go}},
       increased throughput by 12.8\% batching syscalls/reducing GC pressure
+  \end{rSubsection}
 
-  \end{list}
-  {\em Distributed SQL}  \hfill  {Aug -- Dec '16}
-  \smallskip
-  \begin{list}{$\cdot$}{\leftmargin=1.0em}
-  \itemsep -0.5em \vspace{-0.5em}
+  \begin{rSubsection}{Cockroach Labs, Inc.}
+                     {New York, NY}
+                     {Distributed SQL}
+                     {Aug -- Dec '16}
+
     \item Constructed a distributed/parallel query execution engine based off
       the DistSQL
       \href{https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160421_distributed_sql.md}{\underline
@@ -81,8 +79,7 @@
       subject of an engineering blog
       \href{https://www.cockroachlabs.com/blog/better-sql-joins-in-cockroachdb/}{\underline
       {post}}
-  \end{list}
-  \vspace{0.5em}
+  \end{rSubsection}
 
   \begin{rSubsection}{Shopify}
                      {Ottawa, ON}
@@ -126,15 +123,6 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
-  \begin{rSubsection}{VCompiler}
-                     {\href{https://git.io/v7cGZ}{git.io/v7cGZ}}
-                     {}{}
-   \item Wrote a compiler in Haskell for a subset of VHDL, authored a
-     transpiler to Java for simulation
-   \item Added code generation, register allocation, common sub-expression and
-     dead code elimination
-  \end{rSubsection}
-
   \begin{rSubsection}{CFilter}
     {\href{https://git.io/v6GkV}{git.io/v6GkV}}
                      {}{}
@@ -144,6 +132,13 @@
        \href{https://news.ycombinator.com/item?id=12241332}{\underline
        {HackerNews}} with 30,000\texttt{+} views, 670\texttt{+} stars and
        30\texttt{+} forks on GitHub
+  \end{rSubsection}
+
+  \begin{rSubsection}{VCompiler}
+    {\href{https://git.io/v7cGZ}{git.io/v7cGZ}}
+                     {}{}
+                   \item Wrote a compiler in Haskell with register allocation, code generation,
+                     dead code elimination, etc.
   \end{rSubsection}
 
   \begin{rMinisection}
