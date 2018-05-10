@@ -10,7 +10,7 @@
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
-\LoadClass[10pt,letterpaper]{extarticle} % Font size and paper type
+\LoadClass[9.5pt,letterpaper]{extarticle} % Font size and paper type
 
 \usepackage[T1]{fontenc}
 \usepackage[parfill]{parskip}         % Do not indent paragraphs
@@ -74,7 +74,7 @@
     \printaddress{\@addressone}}
   \@ifundefined{@addresstwo}{}{     % Print the second address if specified
     \printaddress{\@addresstwo}}
-  \@ifundefined{@addressthree}{}{ % Print the third address if specified
+  \@ifundefined{@addressthree}{}{   % Print the third address if specified
     \printaddress{\@addressthree}}
 }
 
@@ -84,7 +84,6 @@
 
 % Used to create large resume section
 \newenvironment{rSection}[1]{
-  \sectionskip
   \large\textsc{#1}
   \sectionlineskip
   \hrule
@@ -96,22 +95,14 @@
   \end{list}
 }
 
-\newenvironment{rMinisection}[0]{
-  \begin{list}{}{\leftmargin=0.0em}
-  \itemsep -0.5em \vspace{-0.0em}
-}{
-  \end{list}
-  \vspace{0.5em}
-}
-
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rSubsection}[4]{
+\newenvironment{rWorkSection}[4]{
   %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
-  %%    Employer (bold)                     Dates (regular)    %%
-  %%    Title (emphasis)                Location (emphasis)    %%
+  %%    Employer (bold)                 Location (emphasis)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   {\bf #1}                 \hfill                  {\em #2}
   \ifthenelse{\equal{#3}{}}{}{
@@ -123,6 +114,40 @@
 }{
   \end{list}
   \vspace{0.1em}
+}
+
+\newenvironment{rResearchSection}[3]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Research lab (bold) (Topic (emphasis))    Dates (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {{\bf #1} {\em #2}}                 \hfill                  { #3}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  }{
+  \end{list}
+  \vspace{0.1em}
+}
+
+\newenvironment{rProjectSection}[2]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Project (bold)                        URL (emphasis)   %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {\em #2}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  }{
+  \end{list}
+  \vspace{0.1em}
+}
+
+\newenvironment{rBlurbSection}[0]{
+  \begin{list}{}{\leftmargin=0.0em}
+  \itemsep -0.5em \vspace{-0.0em}
+  }{
+  \end{list}
+  \vspace{0.5em}
 }
 
 \def\namesize{\huge}

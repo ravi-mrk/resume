@@ -11,38 +11,25 @@
 \usepackage{graphicx}
 
 \name{Irfan Sharif}
-\address {
-          \href{https://irfansharif.io/}{irfansharif.io} \\
-          \href{mailto:irfan@irfansharif.io}{irfan@irfansharif.io}\ \\
-          \href{https://www.linkedin.com/in/irfansharifm}{in/irfansharifm} \\
-          \href{https://github.com/irfansharif}{github.com/irfansharif}
-         }
+\address{\href{https://irfansharif.io/}{irfansharif.io} \\
+         \href{mailto:irfan@irfansharif.io}{irfan@irfansharif.io}\ \\
+         \href{https://www.linkedin.com/in/irfansharifm}{in/irfansharifm} \\
+         \href{https://github.com/irfansharif}{github.com/irfansharif}}
 
 \begin{document}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Education}
-  {\bf University of Waterloo} \hfill {Sept '14 -- Apr '19 \em (expected)} \\
-  % {\em Honours Bachelor of Applied Science in Computer Engineering} \hfill {\em GPA 3.7}
-  {\em Honours Bachelor of Applied Science in Computer Engineering} \hfill {GPA 3.7}
-  \vspace{0.5em}
-\end{rSection}
-
 
 %----------------------------------------------------------------------------------------
 %	SUMMARY SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Summary}
-  \vspace {0.5em}
+  \vspace{0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
     \itemsep -0.5em \vspace{-0.5em}
-    \item Experienced with Go, Rust, Haskell, C, C\texttt{++}, Java, Ruby, Python; learning OCaml
-    \item Interested in infrastructure, distributed systems, storage engines
-      and performance engineering
+    \item Experience with infrastructure, distributed systems, search engines,
+      ML, and storage
+    \item Go, C\texttt{++}, C, Java, Python, Rust, Haskell, Ruby; NumPy, SciPy,
+      Pandas, TensorFlow, Keras
   \end{list}
   \vspace{0.5em}
 \end{rSection}
@@ -52,93 +39,80 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
-  \begin{rSubsection}{Amazon, A9.com}
+  \begin{rWorkSection}{Amazon (A9.com)}
                      {Palo Alto, CA}
-                     {Software Engineering Intern (Search)}
+                     {Software Engineering Intern (Search Relevance)}
                      {Jan -- Apr '18}
-    \item Joining A9/Amazon Search; no idea how it works but it's provocative,
-      it'll get the people going.
-  \end{rSubsection}
+    \item Authored query reformulation modules to improve system recall and
+      click-through rate by 2.49\%
+    \item Led multiple design reviews for proposals outlining measures to
+      improve barcode search relevance
+    \item Leveraged sequence-to-sequence learning to generate alternative
+      search suggestions for users
+    \item Incorporated OCR text around barcodes into ranking models to reduce
+      defects/variance in results
+  \end{rWorkSection}
 
-  \begin{rSubsection}{Cockroach Labs, Inc.}
+  \begin{rWorkSection}{Cockroach Labs}
                      {New York, NY}
                      {Backend Engineering Intern (Storage/Performance)}
                      {May -- Sept '17}
-
-    \item Designed a flow-control mechanism for all write operations to reduce
-      99-th percentile latencies
-    \item Authored and implemented an
-      \href{https://github.com/cockroachdb/cockroach/pull/16361}{\underline {RFC}} introducing
-      a dedicated storage
-      engine specialized for Raft's access patterns and persistent state, increased
-      total system write throughput by 14.6\%
+    \item Designed a dedicated persistent state
+      \href{https://github.com/cockroachdb/cockroach/pull/16361}{\underline
+      {storage engine}} for Raft, increased throughput by 14.6\%
+    \item Implemented flow-control mechanisms for writes, significantly reducing
+      system tail latencies
     \item Patched
-      \href{https://github.com/coreos/etcd/pull/8288}{\textbf{etcd/raft}}'s
-      PreVote extension from the Raft thesis paper, formally
-      \href{https://github.com/irfansharif/raft.tla/commit/22b05818b6bcfe6719a708f2270a1308fecbc0fa}{\underline {proved}}
+      \href{https://github.com/coreos/etcd/pull/8288}{\underline{etcd/raft}}'s
+      PreVote extension from the thesis paper, formally
+      \href{https://github.com/irfansharif/raft.tla/commit/22b05818b6bcfe6719a708f2270a1308fecbc0fa}{\underline {verifying}}
       using TLA\texttt{+}
-    \item Forked \href{https://github.com/irfansharif/grpc-go}{\textbf{grpc/grpc-go}},
+    \item Forked \href{https://github.com/irfansharif/grpc-go}{\underline{grpc/grpc-go}},
       increased throughput by 12.8\% batching syscalls/reducing GC pressure
-  \end{rSubsection}
+  \end{rWorkSection}
 
-  \begin{rSubsection}{Cockroach Labs, Inc.}
+  \begin{rWorkSection}{Cockroach Labs}
                      {New York, NY}
                      {Backend Engineering Intern (Distributed SQL)}
                      {Aug -- Dec '16}
-
-    \item Constructed a distributed/parallel query execution engine based off
-      the DistSQL
-      \href{https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160421_distributed_sql.md}{\underline
-      {RFC}}
-    \item Implemented distributed sort algorithms and parallel aggregations for
-      analytics workloads
-    \item Designed distributed row de-duplication and highly performant $n$-way
-      parallel SQL joins
+    \item Constructed core components of new distributed query
+      \href{https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160421_distributed_sql.md}
+      {\underline{execution engine}}, including distributed aggregations, sort,
+      row-deduplications, and performant $n$-way parallel SQL joins
     \item Improved JOIN performance by an order of magnitude, the
-      subject of an engineering blog
-      \href{https://www.cockroachlabs.com/blog/better-sql-joins-in-cockroachdb/}{\underline
-      {post}}
-  \end{rSubsection}
+      subject of an
+      \href{https://www.cockroachlabs.com/blog/better-sql-joins-in-cockroachdb/}
+      {\underline{engineering article}}
+  \end{rWorkSection}
 
-  \begin{rSubsection}{Shopify}
+  \begin{rWorkSection}{Shopify}
                      {Ottawa, ON}
                      {Production Engineering Intern (Infrastructure)}
                      {Jan -- Apr '16}
-
-  \item Designed a dynamic and flexible continuous integration system with
-    auto-scaling build agents
-  \item Built infrastructure to support dynamic workload distribution across
-    shared worker pools
-  \item Optimized the overall scheduling system to handle 1,000\texttt{+} builds per
-    day saving 60,000 USD/mo
-  \end{rSubsection}
-
-  \begin{rMinisection}
-  \item {\em Other internships/work experiences elided.}
-  \end{rMinisection}
-
-  % \begin{rSubsection}{Solink}
-  %                    {Kanata, ON}
-  %                    {Software Engineering Intern (Cloud Migration)}
-  %                    {May -- Sept '15}
-
-  %  \item Decomposed a single monolith platform into inter-connected and
-  %     resilient microservices
-  % \end{rSubsection}
+  \item Built an auto-scaling build system with dynamic, load-balanced
+    workload redistribution
+  \item Optimized the overall scheduling system to handle 1,000\texttt{+}
+    builds per day saving 60,000 USD/mo
+  \end{rWorkSection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
 % RESEARCH SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Research}
-  \begin{rSubsection}{uWaterloo Computer Aided Reasoning Lab}
-                     {Waterloo, ON}
-                     {Undergraduate Researcher (SAT/SMT Solving)}
+\begin{rSection}{Research (uWaterloo)}
+  \begin{rResearchSection}{Distributed Systems Group}
+                     {(Consensus Protocols)}
+                     {May '18 -- Present}
+    \item Investigating speculative execution/parallel commit protocol variants
+      with Prof. Bernard Wong
+  \end{rResearchSection}
+  \begin{rResearchSection}{Computer Aided Reasoning Lab}
+                     {(SAT/SMT solvers)}
                      {Oct -- Dec '16}
-   \item Researched SAT solvers and search space pruning, studied clustering and
-     parallelization strategies
-  \end{rSubsection}
+   \item Researched search space pruning, clustering and
+     parallelization strategies with Prof. Vijay Ganesh
+  \end{rResearchSection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -146,37 +120,38 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Projects}
-  \begin{rSubsection}{CFilter}
-    {\href{https://git.io/v6GkV}{git.io/v6GkV}}
-                     {}{}
+  \begin{rProjectSection}{Kura}
+                         {}
+       \item Building an end-to-end encrypted, synchronized, distributed file
+         system for capstone project
+  \end{rProjectSection}
 
+  \begin{rProjectSection}{CFilter}
+                         {}
        \item Cuckoo Filter paper implementation, featured on
          \href{https://news.ycombinator.com/item?id=12241332}{\underline
-         {HackerNews}}. 670\texttt{+}
-         stars, 30\texttt{+} forks on GitHub
-     % \item Implemented the Cuckoo Filter paper, a probabilistic data structure for
-     %   set-membership queries
-     % \item Trended on the front page of
-     %   \href{https://news.ycombinator.com/item?id=12241332}{\underline
-     %   {HackerNews}} with 30,000\texttt{+} views, 670\texttt{+} stars and
-     %   30\texttt{+} forks on GitHub
-  \end{rSubsection}
+         {HackerNews}}. 700\texttt{+} stars, 30\texttt{+} forks on
+         \href{https://git.io/v6GkV}{\underline {GitHub}}
+  \end{rProjectSection}
 
-  \begin{rSubsection}{VCompiler}
-    {\href{https://git.io/v7cGZ}{git.io/v7cGZ}}
-                     {}{}
-                   \item Wrote a compiler in Haskell with register allocation, code generation,
-                     dead code elimination, etc.
-  \end{rSubsection}
-
-  \begin{rMinisection}
+  \begin{rBlurbSection}
     \item {\em Open-source contributions:}
       \href{https://github.com/coreos/etcd/pull/8288}{\textbf{coreos/etcd}},
       \href{https://github.com/grpc/grpc-go/pull/1478}{\textbf{grpc/grpc-go}},
       \href{https://github.com/uber/go-torch/pull/62}{\textbf{uber/go-torch}},
       \href{https://rubygems.org/gems/cerebrum}{\textbf{cerebrum}},
       \href{https://rubygems.org/gems/mqueue}{\textbf{mqueue}}
-  \end{rMinisection}
+  \end{rBlurbSection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+  {\bf University of Waterloo} \hfill {Sept '14 -- Apr '19 \em (expected)} \\
+  {\em Honours Bachelor of Applied Science in Computer Engineering} \hfill {GPA 3.7}
+  \vspace{0.5em}
 \end{rSection}
 
 \end{document}
