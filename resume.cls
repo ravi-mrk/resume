@@ -133,13 +133,14 @@
   %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
   %%    Project (bold)                        URL (emphasis)   %%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  {\bf #1}                 \hfill                  {\em #2}
-  \smallskip
+  % {\bf #1}                 \hfill                  {\em #2}
+  % \smallskip
+  \vspace{0.6em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
   }{
   \end{list}
-  \vspace{0.1em}
+  % \vspace{0.1em}
 }
 
 \newenvironment{rBlurbSection}[0]{
@@ -147,7 +148,7 @@
   \itemsep -0.5em \vspace{-0.0em}
   }{
   \end{list}
-  \vspace{0.5em}
+  \vspace{0.1em}
 }
 
 \def\namesize{\huge}
