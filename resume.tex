@@ -26,8 +26,8 @@
   \vspace{0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
     \itemsep -0.5em \vspace{-0.5em}
-    \item Experience with infrastructure, distributed systems, ML, storage and
-      search engines
+    \item Experience with distributed systems, ML, storage and search engines,
+      file systems, SAT solvers
     \item Go, C\texttt{++}, C, Java, Python, Rust, Haskell, Ruby; NumPy, SciPy,
       Pandas, TensorFlow, Keras
   \end{list}
@@ -49,6 +49,12 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
+  \begin{rEmptyWorkSection}{Cockroach Labs}
+                      {Toronto, ON}
+                      {Member of Technical Staff (?)}
+                      {Sept '19 -- Present}
+  \end{rEmptyWorkSection}
+
   \begin{rWorkSection}{LinkedIn}
                       {Sunnyvale, CA}
                       {Software Engineering Intern (Machine Learning Infrastructure)}
@@ -100,21 +106,17 @@
     \item Constructed core components of new distributed query
       \href{https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160421_distributed_sql.md}
       {\underline{execution engine}}, including distributed aggregations, sort,
-      row-deduplications, and performant $n$-way parallel SQL joins
-    \item Improved JOIN performance by an order of magnitude, the
-      subject of an
+      row-deduplications, and performant $n$-way
       \href{https://www.cockroachlabs.com/blog/better-sql-joins-in-cockroachdb/}
-      {\underline{engineering article}}
+      {\underline{parallel SQL joins}}
   \end{rWorkSection}
 
   \begin{rWorkSection}{Shopify}
                      {Ottawa, ON}
                      {Production Engineering Intern (Infrastructure)}
                      {Jan -- Apr '16}
-  \item Built an auto-scaling build system with dynamic, load-balanced
-    workload redistribution
-  \item Optimized the overall scheduling system to handle 1,000\texttt{+}
-    builds per day saving 60,000 USD/mo
+  \item Built an auto-scaling build system with dynamic workload distribution
+    handling 1,000\texttt{+} builds/day
   \end{rWorkSection}
   \vspace{0.5em}
 \end{rSection}
@@ -139,20 +141,19 @@
 
 \begin{rSection}{Projects}
   \begin{rProjectSection}{}{}
-    \item \textbf {Kura} -- An end-to-end encrypted, synchronized, distributed file
-      system for capstone project
-    \item \textbf {CFilter} -- Cuckoo Filter implementation with 730\texttt{+}
-      stars and 35\texttt{+} forks on
-      \href{https://github.com/irfansharif/cfilter}{\underline {GitHub}}
+    \item \textbf {Kura} -- An E2EE, synchronized, distributed
+      \href{https://github.com/kurafs/kura}{\underline{file system}} with
+      live-sharing and file streaming
   \end{rProjectSection}
 
   \begin{rBlurbSection}
     \item {\em Open-source contributions:}
+      \href{https://github.com/irfansharif/cfilter}{\textbf{cfilter}},
       \href{https://github.com/coreos/etcd/pull/8288}{\textbf{coreos/etcd}},
       \href{https://github.com/grpc/grpc-go/pull/1478}{\textbf{grpc/grpc-go}},
       \href{https://github.com/uber/go-torch/pull/62}{\textbf{uber/go-torch}},
-      \href{https://rubygems.org/gems/cerebrum}{\textbf{cerebrum}},
-      \href{https://rubygems.org/gems/mqueue}{\textbf{mqueue}}
+      \href{https://rubygems.org/gems/cerebrum}{\textbf{cerebrum}}
+      % \href{https://rubygems.org/gems/mqueue}{\textbf{mqueue}}
   \end{rBlurbSection}
 \end{rSection}
 

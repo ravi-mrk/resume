@@ -116,6 +116,18 @@
   \vspace{0.1em}
 }
 
+\newenvironment{rEmptyWorkSection}[4]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Employer (bold)                 Location (emphasis)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {\em #2}
+  \ifthenelse{\equal{#3}{}}{}{
+    \\
+  {\em #3}                 \hfill                  { #4}
+}\vspace{0.1em}
+}
+
 \newenvironment{rResearchSection}[3]{
   %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%    Research lab (bold) (Topic (emphasis))    Dates (regular)    %%
