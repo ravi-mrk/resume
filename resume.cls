@@ -88,18 +88,38 @@
   \sectionlineskip
   \hrule
   \begin{list}{}{
-    \setlength{\leftmargin}{0em}
-  }
+      \setlength{\leftmargin}{0em}
+    }
   \item[]
-}{
+  }{
   \end{list}
+  \vspace{0.5em}
+}
+
+\newenvironment{rSummarySection}[1]{
+  \vspace{0.5em}
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+    {#1}
+  \end{list}
+  \vspace{0.1em}
+}
+
+\newenvironment{rEducationSection}[4]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    School name (bold)                  Dates (regular)    %%
+  %%    Title (emphasis)                      GPA (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {#2} \\
+  {\em #3}                 \hfill                  {GPA #4}
+  \smallskip
 }
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE FORMATTING
+%	SECTION FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rWorkSection}[4]{
+\newenvironment{rWorkSection}[5]{
   %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
   %%    Employer (bold)                 Location (emphasis)    %%
   %%    Title (emphasis)                    Dates (regular)    %%
@@ -111,7 +131,30 @@
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
-}{
+  {#5}
+  \end{list}
+  \vspace{0.1em}
+}
+
+\newenvironment{rDualWorkSection}[8]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Employer (bold)                 Location (emphasis)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
+  %%    Title (emphasis)                    Dates (regular)    %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  {\bf #1}                 \hfill                  {\em #2}
+  \\
+  {\em #3}                 \hfill                  { #4}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  {#5}
+  \end{list}
+  {\em #6}                 \hfill                  { #7}
+  \smallskip
+  \begin{list}{$\cdot$}{\leftmargin=1.0em}
+  \itemsep -0.5em \vspace{-0.5em}
+  {#8}
   \end{list}
   \vspace{0.1em}
 }
@@ -124,13 +167,13 @@
   {\bf #1}                 \hfill                  {\em #2}
   \ifthenelse{\equal{#3}{}}{}{
     \\
-  {\em #3}                 \hfill                  { #4}
-}\vspace{0.1em}
+    {\em #3}                 \hfill                  { #4}
+  }\vspace{0.1em}
 }
 
 \newenvironment{rResearchSection}[3]{
   %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %%    Research lab (bold) (Topic (emphasis))    Dates (regular)    %%
+  %%    Research lab (bold) Topic (emphasis)      Dates (regular)    %%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   {{\bf #1} {\em #2}}                 \hfill                  { #3}
   \smallskip
@@ -141,18 +184,15 @@
   \vspace{0.1em}
 }
 
-\newenvironment{rProjectSection}[2]{
+\newenvironment{rProjectSection}[0]{
   %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
   %%    Project (bold)                        URL (emphasis)   %%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % {\bf #1}                 \hfill                  {\em #2}
-  % \smallskip
-  \vspace{0.6em}
+  \vspace{0.5em}
   \begin{list}{$\cdot$}{\leftmargin=1.0em}
   \itemsep -0.5em \vspace{-0.5em}
   }{
   \end{list}
-  % \vspace{0.1em}
 }
 
 \newenvironment{rBlurbSection}[0]{
